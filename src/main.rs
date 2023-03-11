@@ -15,7 +15,7 @@ fn main() {
 
             Ok(mut stream) => {
                 println!("accepted new connection");
-                stream.write("PONG".as_bytes());
+                stream.write("+PONG\r\n".as_bytes());
             }
             Err(e) => {
                 println!("error: {}", e);
